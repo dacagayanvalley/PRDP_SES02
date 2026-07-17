@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc && vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "fetch:sidlan-api": "python scripts/fetch_sidlan_api_sources.py"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",

@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AppShell } from "../components/layout/AppShell";
 import { loadInitialDataset, saveDataset, exportDataset, resetLocalDataset, type AppDataset } from "../data/repositories";
 import { Dashboard } from "../pages/Dashboard";
@@ -10,8 +10,9 @@ import { SubprojectDetail } from "../pages/SubprojectDetail";
 import { Monitoring } from "../pages/Monitoring";
 import { Grm } from "../pages/Grm";
 import { Reports } from "../pages/Reports";
+import { SourceDatasets } from "../pages/SourceDatasets";
 
-export type PageKey = "dashboard" | "portfolio" | "detail" | "screening" | "gis" | "nol" | "monitoring" | "grm" | "reports";
+export type PageKey = "dashboard" | "sources" | "portfolio" | "detail" | "screening" | "gis" | "nol" | "monitoring" | "grm" | "reports";
 
 export default function App() {
   const [dataset, setDataset] = useState<AppDataset | null>(null);
@@ -54,6 +55,7 @@ export default function App() {
 
   const pages = {
     dashboard: <Dashboard dataset={dataset} role={role} />,
+    sources: <SourceDatasets />,
     portfolio: <Portfolio dataset={dataset} />,
     detail: <SubprojectDetail dataset={dataset} actions={actions} />,
     screening: <Screening dataset={dataset} actions={actions} />,

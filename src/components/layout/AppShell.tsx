@@ -1,8 +1,9 @@
-﻿import type { ReactNode } from "react";
+import type { ReactNode } from "react";
 import type { PageKey } from "../../app/App";
 
 const nav: { key: PageKey; label: string }[] = [
   { key: "dashboard", label: "Dashboard" },
+  { key: "sources", label: "Source Data" },
   { key: "portfolio", label: "Portfolio" },
   { key: "detail", label: "Subproject Detail" },
   { key: "screening", label: "Screening" },

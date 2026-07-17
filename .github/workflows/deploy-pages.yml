@@ -1,9 +1,11 @@
-﻿name: Build and publish SES-Track 02 to GitHub Pages
+name: Build and publish SES-Track 02 to GitHub Pages
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: "0 20 * * 0"
 
 permissions:
   contents: write
@@ -27,6 +29,20 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Refresh SIDLAN API snapshots
+        env:
+          SIDLAN_FMR_API_KEY: ${{ secrets.SIDLAN_FMR_API_KEY }}
+          SIDLAN_IBUILD_API_KEY: ${{ secrets.SIDLAN_IBUILD_API_KEY }}
+          SIDLAN_IPLAN_API_KEY: ${{ secrets.SIDLAN_IPLAN_API_KEY }}
+          SIDLAN_IREAP_API_KEY: ${{ secrets.SIDLAN_IREAP_API_KEY }}
+          SIDLAN_LGU_API_KEY: ${{ secrets.SIDLAN_LGU_API_KEY }}
+        run: |
+          if [ -n "$SIDLAN_FMR_API_KEY$SIDLAN_IBUILD_API_KEY$SIDLAN_IPLAN_API_KEY$SIDLAN_IREAP_API_KEY$SIDLAN_LGU_API_KEY" ]; then
+            python scripts/fetch_sidlan_api_sources.py
+          else
+            echo "SIDLAN API secrets are not configured; using committed static source snapshot."
+          fi
 
       - name: Build static site
         run: npm run build
