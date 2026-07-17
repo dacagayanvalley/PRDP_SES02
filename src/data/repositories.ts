@@ -20,19 +20,20 @@ const OFFICIAL_SOURCE = "sidlan-region-02";
 function asArray<T>(value: unknown): T[] {
   return Array.isArray(value) ? value as T[] : [];
 }
+
 function normalizeDataset(dataset: Partial<AppDataset>): AppDataset {
   return {
     subprojects: asArray<Subproject>(dataset.subprojects).map((item) => ({
       ...item,
       component: item.component ?? "IBUILD",
       type: item.type ?? "Unspecified",
-      proponent: item.proponent ?? "Unspecified",
+      proponent: item.proponent ?? "SIDLAN disclosure record",
       province: item.province ?? "Region II",
       municipality: item.municipality ?? "Unspecified",
       estimatedCostPhp: Number(item.estimatedCostPhp ?? 0),
-      stage: item.stage ?? "Draft",
+      stage: item.stage ?? "Under Screening",
       riskLevel: item.riskLevel ?? "Moderate",
-      responsibleSes: item.responsibleSes ?? "Unassigned",
+      responsibleSes: item.responsibleSes ?? "RPCO 02 SES Unit",
       sensitiveFlags: item.sensitiveFlags ?? [],
       updatedAt: item.updatedAt ?? new Date().toISOString(),
     })) as Subproject[],
@@ -58,10 +59,6 @@ async function loadOfficialDataset(): Promise<AppDataset> {
   return normalizeDataset(await loadJson<AppDataset>("./data/sidlan/region-02-app-dataset.json"));
 }
 
-async function loadDemoDataset(): Promise<AppDataset> {
-  return normalizeDataset(await loadJson<AppDataset>("./data/demo/region-02-demo.json"));
-}
-
 export async function loadInitialDataset(): Promise<AppDataset> {
   if (new URLSearchParams(window.location.search).get("reset") === "1") {
     resetLocalDataset();
@@ -76,18 +73,10 @@ export async function loadInitialDataset(): Promise<AppDataset> {
     }
   }
 
-  try {
-    const official = await loadOfficialDataset();
-    saveDataset(official);
-    localStorage.setItem(SOURCE_KEY, OFFICIAL_SOURCE);
-    return official;
-  } catch (error) {
-    console.warn("Unable to load SIDLAN official snapshot; falling back to demo data.", error);
-    const demo = await loadDemoDataset();
-    saveDataset(demo);
-    localStorage.setItem(SOURCE_KEY, "demo");
-    return demo;
-  }
+  const official = await loadOfficialDataset();
+  saveDataset(official);
+  localStorage.setItem(SOURCE_KEY, OFFICIAL_SOURCE);
+  return official;
 }
 
 export function saveDataset(dataset: AppDataset): void {
@@ -122,7 +111,4 @@ export function resetLocalDataset(): void {
   localStorage.removeItem(STORE_KEY);
   localStorage.removeItem(SOURCE_KEY);
 }
-
-
-
 

@@ -17,7 +17,7 @@ export function Reports({ dataset }: { dataset: AppDataset }) {
         <div className="section-heading">
           <div>
             <h2>Reports And Export Package</h2>
-            <p className="source">Static MVP outputs use the current local browser dataset and apply built-in redaction rules.</p>
+            <p className="source">Reports use the current SIDLAN-based browser working dataset and apply built-in redaction rules.</p>
           </div>
           <div className="template-actions"><button onClick={() => window.print()}>Print current report</button><button className="ghost" onClick={downloadReportHtml}>Download report HTML</button></div>
         </div>
@@ -60,9 +60,9 @@ function ReportMeta({ title, generatedAt, sourceRecords, filters }: { title: str
   return (
     <section className="panel report-header">
       <div>
-        <p className="eyebrow">SES-Track 02 Static MVP</p>
+        <p className="eyebrow">SES-Track 02</p>
         <h2>{title}</h2>
-        <p className="source">This report is generated from local browser data. It is for UAT/demo/local tracking unless a production backend is approved.</p>
+        <p className="source">This report is generated from the current SIDLAN-based browser working dataset. Confirm official use against source records and authorized review.</p>
       </div>
       <dl className="report-meta">
         <div><dt>Generated</dt><dd>{generatedAt.toLocaleString()}</dd></div>
@@ -71,7 +71,7 @@ function ReportMeta({ title, generatedAt, sourceRecords, filters }: { title: str
         <div><dt>Source records</dt><dd>{sourceRecords}</dd></div>
         <div><dt>Prepared by</dt><dd>____________________</dd></div>
         <div><dt>Reviewed by</dt><dd>____________________</dd></div>
-        <div><dt>Version</dt><dd>Static MVP report v0.1</dd></div>
+        <div><dt>Version</dt><dd>Production public report v0.2</dd></div>
         <div><dt>Redaction</dt><dd>Restricted GRM, GBV/SEA/SH, sensitive land/IP details redacted.</dd></div>
       </dl>
       <div className="report-signatures">
@@ -201,5 +201,6 @@ function csvCell(value: unknown) {
   const text = String(value ?? "");
   return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
+
 
 

@@ -55,7 +55,7 @@ export function GisScreening({ dataset, actions }: Props) {
       return;
     }
     const subprojects = dataset.subprojects.map((item) => item.id === selected.id ? { ...item, coordinates: { lat: nextLat, lng: nextLng }, updatedAt: new Date().toISOString() } : item);
-    actions.save(appendAudit({ ...dataset, subprojects }, { entityType: "Subproject", entityId: selected.id, action: "Updated GIS coordinates", actor: "Static MVP user" }), "Coordinates saved");
+    actions.save(appendAudit({ ...dataset, subprojects }, { entityType: "Subproject", entityId: selected.id, action: "Updated GIS coordinates", actor: "SES-Track user" }), "Coordinates saved");
     setMessage("");
   }
 
@@ -69,7 +69,7 @@ export function GisScreening({ dataset, actions }: Props) {
     const subproject = { ...(dataset.subprojects.find((item) => item.id === selected.id) as Subproject), coordinates: { lat: nextLat, lng: nextLng } };
     const results = runSpatialOverlay(subproject, activeLayers);
     const others = dataset.spatialOverlayResults.filter((item) => item.subprojectId !== selected.id || activeLayers.every((layer) => layer.id !== item.layerId));
-    actions.save(appendAudit({ ...dataset, spatialOverlayResults: [...results, ...others] }, { entityType: "Subproject", entityId: selected.id, action: "Ran advisory GIS overlay screening", actor: "Static MVP user" }), `Overlay checked against ${activeLayers.length} visible layer(s)`);
+    actions.save(appendAudit({ ...dataset, spatialOverlayResults: [...results, ...others] }, { entityType: "Subproject", entityId: selected.id, action: "Ran advisory GIS overlay screening", actor: "SES-Track user" }), `Overlay checked against ${activeLayers.length} visible layer(s)`);
     setMessage("");
   }
 
@@ -82,7 +82,7 @@ export function GisScreening({ dataset, actions }: Props) {
     const candidate = requirementFromOverlay({ ...result, reviewerConfirmed: !result.reviewerConfirmed });
     let requirements = dataset.requirements.filter((item) => item.id !== `geo-req-${result.subprojectId}-${result.layerId}`);
     if (candidate) requirements = [candidate, ...requirements];
-    actions.save(appendAudit({ ...dataset, spatialOverlayResults, requirements }, { entityType: "SpatialOverlayResult", entityId: result.id, action: !result.reviewerConfirmed ? "Confirmed advisory overlay result and synced requirement" : "Unconfirmed advisory overlay result and removed generated requirement", actor: "Static MVP user" }), !result.reviewerConfirmed ? "Spatial requirement synced" : "Spatial requirement removed");
+    actions.save(appendAudit({ ...dataset, spatialOverlayResults, requirements }, { entityType: "SpatialOverlayResult", entityId: result.id, action: !result.reviewerConfirmed ? "Confirmed advisory overlay result and synced requirement" : "Unconfirmed advisory overlay result and removed generated requirement", actor: "SES-Track user" }), !result.reviewerConfirmed ? "Spatial requirement synced" : "Spatial requirement removed");
   }
 
   return (
@@ -162,3 +162,4 @@ function colorFor(category: string) {
   if (category === "Forest/Public Land") return "#6c8f35";
   return "#60727b";
 }
+

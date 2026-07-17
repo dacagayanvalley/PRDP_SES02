@@ -1,4 +1,4 @@
-import { appendAudit, type AppDataset } from "../../data/repositories";
+﻿import { appendAudit, type AppDataset } from "../../data/repositories";
 import type { DocumentRecord, PermitRecord } from "../../domain/types";
 
 interface Props {
@@ -14,22 +14,22 @@ export function EvidenceManager({ dataset, subprojectId, actions }: Props) {
 
   function addDocument() {
     const doc: DocumentRecord = { id: crypto.randomUUID(), subprojectId, title: "New evidence metadata", documentType: "General Evidence", version: "v1", confidentiality: "Internal", status: "Draft", remarks: "Metadata only; no file stored in static MVP.", updatedAt: new Date().toISOString() };
-    actions.save(appendAudit({ ...dataset, documents: [doc, ...dataset.documents] }, { entityType: "Document", entityId: doc.id, action: "Added document metadata", actor: "Static MVP user" }));
+    actions.save(appendAudit({ ...dataset, documents: [doc, ...dataset.documents] }, { entityType: "Document", entityId: doc.id, action: "Added document metadata", actor: "SES-Track user" }));
   }
 
   function addPermit() {
     const permit: PermitRecord = { id: crypto.randomUUID(), subprojectId, permitType: "New permit/clearance", issuingAgency: "To be specified", status: "Not Started", updatedAt: new Date().toISOString() };
-    actions.save(appendAudit({ ...dataset, permits: [permit, ...dataset.permits] }, { entityType: "Permit", entityId: permit.id, action: "Added permit metadata", actor: "Static MVP user" }));
+    actions.save(appendAudit({ ...dataset, permits: [permit, ...dataset.permits] }, { entityType: "Permit", entityId: permit.id, action: "Added permit metadata", actor: "SES-Track user" }));
   }
 
   function updateDocument(id: string, patch: Partial<DocumentRecord>) {
     const documentsNext = dataset.documents.map((item) => item.id === id ? { ...item, ...patch, updatedAt: new Date().toISOString() } : item);
-    actions.save(appendAudit({ ...dataset, documents: documentsNext }, { entityType: "Document", entityId: id, action: "Updated document metadata", actor: "Static MVP user" }));
+    actions.save(appendAudit({ ...dataset, documents: documentsNext }, { entityType: "Document", entityId: id, action: "Updated document metadata", actor: "SES-Track user" }));
   }
 
   function updatePermit(id: string, patch: Partial<PermitRecord>) {
     const permitsNext = dataset.permits.map((item) => item.id === id ? { ...item, ...patch, updatedAt: new Date().toISOString() } : item);
-    actions.save(appendAudit({ ...dataset, permits: permitsNext }, { entityType: "Permit", entityId: id, action: "Updated permit metadata", actor: "Static MVP user" }));
+    actions.save(appendAudit({ ...dataset, permits: permitsNext }, { entityType: "Permit", entityId: id, action: "Updated permit metadata", actor: "SES-Track user" }));
   }
 
   return (
@@ -62,3 +62,4 @@ export function EvidenceManager({ dataset, subprojectId, actions }: Props) {
     </div>
   );
 }
+

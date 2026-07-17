@@ -1,4 +1,4 @@
-import type { Requirement } from "../domain/types";
+﻿import type { Requirement } from "../domain/types";
 
 export function evaluateNolReadiness(requirements: Requirement[], gate: "NOL1" | "NOL2") {
   const relevant = requirements.filter((item) => item.dueStage === gate || item.dueStage === "Both");
@@ -14,3 +14,4 @@ export function evaluateNolReadiness(requirements: Requirement[], gate: "NOL1" |
       : `${gate} is blocked by ${blockers.length} requirement(s): ${blockers.map((item) => item.label).join(", ")}.`,
   };
 }
+

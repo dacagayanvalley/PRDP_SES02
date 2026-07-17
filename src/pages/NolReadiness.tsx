@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import type { AppDataset } from "../data/repositories";
 import { RequirementManager } from "../components/requirements/RequirementManager";
 import { evaluateNolReadiness } from "../rules/evaluateNolReadiness";
@@ -48,3 +48,4 @@ export function NolReadiness({ dataset, actions }: Props) {
     </div>
   );
 }
+

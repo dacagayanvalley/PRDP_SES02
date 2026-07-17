@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { appendAudit, loadJson, type AppDataset } from "../data/repositories";
 import type { MonitoringFinding } from "../domain/types";
 
@@ -28,13 +28,13 @@ export function Monitoring({ dataset, actions }: Props) {
     const newFindings: MonitoringFinding[] = checklist.items
       .filter((item) => answers[item.id] === "Non-compliant")
       .map((item) => ({ id: crypto.randomUUID(), subprojectId: selected.id, checklist: checklist.label, finding: `${item.text}${notes[item.id] ? ` Notes: ${notes[item.id]}` : ""}`, severity: item.severityOnNo, status: "Action Assigned", dueDate, responsibleParty }));
-    const next = appendAudit({ ...dataset, findings: [...newFindings, ...dataset.findings] }, { entityType: "Monitoring", entityId: selected.id, action: `Submitted ${checklist.label}; created ${newFindings.length} finding(s)`, actor: "Static MVP user" });
+    const next = appendAudit({ ...dataset, findings: [...newFindings, ...dataset.findings] }, { entityType: "Monitoring", entityId: selected.id, action: `Submitted ${checklist.label}; created ${newFindings.length} finding(s)`, actor: "SES-Track user" });
     actions.save(next);
   }
 
   function updateFinding(id: string, patch: Partial<MonitoringFinding>) {
     const findings = dataset.findings.map((item) => item.id === id ? { ...item, ...patch } : item);
-    actions.save(appendAudit({ ...dataset, findings }, { entityType: "MonitoringFinding", entityId: id, action: "Updated corrective action/finding status", actor: "Static MVP user" }));
+    actions.save(appendAudit({ ...dataset, findings }, { entityType: "MonitoringFinding", entityId: id, action: "Updated corrective action/finding status", actor: "SES-Track user" }));
   }
 
   return (
@@ -74,3 +74,4 @@ function nextMonthDate() {
   date.setDate(date.getDate() + 30);
   return date.toISOString().slice(0, 10);
 }
+

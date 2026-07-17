@@ -1,4 +1,4 @@
-export type ComponentCode = "IPLAN" | "IBUILD" | "IREAP" | "ISUPPORT" | "CERC";
+﻿export type ComponentCode = "IPLAN" | "IBUILD" | "IREAP" | "ISUPPORT" | "CERC";
 export type RiskLevel = "Low" | "Moderate" | "Substantial" | "High";
 export type Stage =
   | "Draft"

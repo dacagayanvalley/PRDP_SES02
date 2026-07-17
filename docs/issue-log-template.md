@@ -2,7 +2,7 @@
 
 | ID | Date | Reporter | Area | Severity | Description | Expected | Actual | Status | Owner | Target Date | Resolution Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UAT-001 | YYYY-MM-DD | Name | Screening/GIS/NOL/Reports/Import | Low/Medium/High/Critical |  |  |  | Open |  |  |  |
+| UAT-001 | YYYY-MM-DD | Name | Dashboard/Portfolio/Screening/GIS/NOL/Reports/GRM | Low/Medium/High/Critical |  |  |  | Open |  |  |  |
 
 Severity guide:
 

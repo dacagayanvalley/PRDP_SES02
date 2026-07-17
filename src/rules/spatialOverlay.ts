@@ -1,4 +1,4 @@
-import type { ReferenceLayer, Requirement, SpatialOverlayResult, Subproject } from "../domain/types";
+﻿import type { ReferenceLayer, Requirement, SpatialOverlayResult, Subproject } from "../domain/types";
 
 const nearBufferKm = 3;
 
@@ -30,7 +30,7 @@ export function runSpatialOverlay(subproject: Subproject, layers: ReferenceLayer
       category: layer.category,
       result,
       distanceKm: Number(edgeDistance.toFixed(2)),
-      uncertainty: layer.sensitivity === "Synthetic Demo" ? "Synthetic demo layer; not legal certification." : "Advisory GIS screen; competent agency confirmation may still be required.",
+      uncertainty: "Advisory GIS screen; competent agency confirmation may still be required.",
       reviewerConfirmed: false,
       checkedAt: new Date().toISOString(),
     } satisfies SpatialOverlayResult;
@@ -62,3 +62,5 @@ export function requirementFromOverlay(result: SpatialOverlayResult): Requiremen
   }
   return null;
 }
+
+

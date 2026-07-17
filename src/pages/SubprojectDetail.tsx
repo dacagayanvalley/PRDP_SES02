@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import type { AppDataset } from "../data/repositories";
 import { RequirementManager } from "../components/requirements/RequirementManager";
 import { EvidenceManager } from "../components/requirements/EvidenceManager";
@@ -56,3 +56,4 @@ export function SubprojectDetail({ dataset, actions }: Props) {
 function Info({ label, value }: { label: string; value: string }) {
   return <div className="info-box"><span>{label}</span><strong>{value}</strong></div>;
 }
+

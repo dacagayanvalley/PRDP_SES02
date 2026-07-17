@@ -44,3 +44,4 @@ try {
 } catch (error) {
   showBootError(error);
 }
+

@@ -10,9 +10,8 @@ import { SubprojectDetail } from "../pages/SubprojectDetail";
 import { Monitoring } from "../pages/Monitoring";
 import { Grm } from "../pages/Grm";
 import { Reports } from "../pages/Reports";
-import { ImportData } from "../pages/ImportData";
 
-export type PageKey = "dashboard" | "portfolio" | "detail" | "screening" | "gis" | "nol" | "monitoring" | "grm" | "reports" | "import";
+export type PageKey = "dashboard" | "portfolio" | "detail" | "screening" | "gis" | "nol" | "monitoring" | "grm" | "reports";
 
 export default function App() {
   const [dataset, setDataset] = useState<AppDataset | null>(null);
@@ -41,12 +40,12 @@ export default function App() {
         notify("JSON backup exported");
       }
     },
-    reset() {
-      if (!window.confirm("Reload demo data? This clears the current browser-local working dataset.")) return;
+    reloadOfficial() {
+      if (!window.confirm("Reload the official SIDLAN Region II snapshot? This clears browser-local working edits.")) return;
       resetLocalDataset();
       loadInitialDataset().then((next) => {
         setDataset(next);
-        notify("Demo data reloaded");
+        notify("Official SIDLAN snapshot reloaded");
       });
     },
   }), [dataset]);
@@ -55,7 +54,7 @@ export default function App() {
 
   const pages = {
     dashboard: <Dashboard dataset={dataset} role={role} />,
-    portfolio: <Portfolio dataset={dataset} actions={actions} />,
+    portfolio: <Portfolio dataset={dataset} />,
     detail: <SubprojectDetail dataset={dataset} actions={actions} />,
     screening: <Screening dataset={dataset} actions={actions} />,
     gis: <GisScreening dataset={dataset} actions={actions} />,
@@ -63,7 +62,6 @@ export default function App() {
     monitoring: <Monitoring dataset={dataset} actions={actions} />,
     grm: <Grm dataset={dataset} actions={actions} />,
     reports: <Reports dataset={dataset} />,
-    import: <ImportData dataset={dataset} actions={actions} />,
   };
 
   return (
@@ -73,10 +71,11 @@ export default function App() {
       role={role}
       setRole={setRole}
       onExport={actions.exportData}
-      onReset={actions.reset}
+      onReloadOfficial={actions.reloadOfficial}
       toast={toast}
     >
       {pages[page]}
     </AppShell>
   );
 }
+

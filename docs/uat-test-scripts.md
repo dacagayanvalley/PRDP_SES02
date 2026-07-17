@@ -1,15 +1,23 @@
 ﻿# UAT Test Scripts
 
-## Script 1: Screening to requirements
+## Script 1: Official Source Check
+
+- Open Dashboard.
+- Expected: official source snapshot panel shows SIDLAN Region II status.
+- Open Portfolio.
+- Expected: records are SIDLAN Region II official subprojects only.
+- Expected: no Import page, no demo reload action, and no synthetic record button.
+
+## Script 2: Screening to Requirements
 
 - Open Screening.
-- Select Annex C and a demo subproject.
+- Select Annex C and an official SIDLAN subproject.
 - Answer a trigger question without remarks and click Save.
 - Expected: save is blocked with an evidence/remarks alert.
 - Add remarks, save again.
 - Expected: toast confirms save and Triggered Requirement Preview updates.
 
-## Script 2: GIS advisory overlay
+## Script 3: GIS Advisory Overlay
 
 - Open GIS Screening.
 - Enter invalid coordinates and save.
@@ -19,26 +27,16 @@
 - Confirm an overlay hit.
 - Expected: generated spatial requirement appears.
 
-## Script 3: Import guardrails
-
-- Open Import.
-- Paste the CSV template and preview.
-- Expected: valid preview.
-- Commit twice.
-- Expected: second commit skips duplicate codes.
-- Preview a JSON backup and commit.
-- Expected: confirmation prompt before replacement.
-
-## Script 4: Reports and redaction
+## Script 4: Reports and Redaction
 
 - Open Reports.
 - Generate a dossier and monthly report.
 - Use Print and Download report HTML.
 - Expected: report includes source metadata, signatures, and redacted restricted GRM fields.
 
-## Script 5: Static hosting smoke test
+## Script 5: Static Hosting Smoke Test
 
 - Run `npm run build`.
 - Serve or deploy `dist`.
-- Open Dashboard, Screening, GIS Screening, Reports, and Import directly through the app navigation.
+- Open Dashboard, Portfolio, Screening, GIS Screening, NOL Readiness, Reports, and GRM through app navigation.
 - Expected: no blank pages and no console-breaking runtime errors.

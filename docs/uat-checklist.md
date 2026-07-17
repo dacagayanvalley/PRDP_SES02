@@ -1,11 +1,10 @@
-# Static MVP User Acceptance Checklist
+﻿# Production UAT Checklist
 
-- Reload demo data once after a new build.
-- Create or import a synthetic subproject.
-- Complete Annex B or Annex C screening and regenerate requirements.
-- Run GIS overlay checks and confirm one advisory result.
-- Update NOL requirement statuses and verify blockers change.
-- Submit Annex P monitoring and verify findings are created.
-- Create GRM cases, including one restricted category, and verify redaction in reports.
-- Generate Compliance Dossier and Monthly Report.
-- Export CSV package and JSON backup.
+- Open the hosted GitHub Pages site.
+- Confirm Dashboard shows the SIDLAN official source snapshot.
+- Confirm Portfolio contains only SIDLAN Region II records.
+- Confirm there is no Import page, no demo reload action, and no synthetic subproject creation action.
+- Complete an Annex B/C screening for an official subproject and verify triggered requirements update.
+- Run GIS Screening on an official subproject and confirm only reviewed overlay hits create requirements.
+- Generate Reports and confirm source metadata, signatures, and redaction notes are present.
+- Run `npm run build` before any production push.

@@ -8,7 +8,7 @@ Use GitHub Pages for the static MVP and browser localStorage for simple local da
 
 - No server-side authentication or authorization.
 - No central multi-user database.
-- No confidential records in hosted demo data.
+- No confidential or manually fabricated records in hosted public data.
 - Audit trail is local and advisory.
 - GIS overlays are advisory and must be confirmed by official custodians.
 
@@ -31,3 +31,4 @@ A backend becomes necessary if any of the following are required:
 - Versioned official forms and rulesets.
 - Backup, recovery, logging, and monitoring.
 - Signed release checklist before each official form/rules update.
+

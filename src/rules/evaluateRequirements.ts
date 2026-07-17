@@ -1,4 +1,4 @@
-import type { Requirement, ScreeningRecord } from "../domain/types";
+﻿import type { Requirement, ScreeningRecord } from "../domain/types";
 
 export interface ScreeningQuestionSchema {
   id: string;
@@ -94,3 +94,4 @@ export function generateRequirementsFromScreenings(subprojectId: string, screeni
 
   return [...generated.values()];
 }
+

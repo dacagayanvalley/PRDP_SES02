@@ -1,4 +1,4 @@
-export function addWorkingDays(startIso: string, workingDays: number): string {
+﻿export function addWorkingDays(startIso: string, workingDays: number): string {
   const date = new Date(startIso);
   let added = 0;
   while (added < workingDays) {
@@ -17,3 +17,4 @@ export const defaultSla = {
   higherLevelResolutionWorkingDays: 30,
   seriousIncidentNotificationHours: 48,
 };
+

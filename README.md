@@ -1,6 +1,17 @@
-# SES-Track 02 Static MVP
+﻿# SES-Track 02
 
-SES-Track 02 is a static GitHub Pages-ready MVP for PRDP Scale-Up RPCO 02 Social and Environmental Safeguards workflows.
+SES-Track 02 is the public GitHub Pages production view for PRDP Scale-Up RPCO 02 Social and Environmental Safeguards tracking.
+
+## Official Source
+
+The hosted site uses the SIDLAN Region II safeguards disclosure snapshot as the official source record:
+
+- Infrastructure source: https://sidlan.da.gov.ph/ses-ib-safeguard-docs/disclosure
+- Region filter: Cagayan Valley (Region II)
+- App snapshot: `public/data/sidlan/region-02-app-dataset.json`
+- Source audit snapshot: `public/data/sidlan/region-02-sidlan.json`
+
+New subproject records must come from the SIDLAN refresh process. The production UI does not provide demo-data loading, synthetic subproject creation, or CSV/manual subproject import.
 
 ## Local Development
 
@@ -17,10 +28,8 @@ Open http://127.0.0.1:5173.
 npm run build
 ```
 
-The static output is written to `dist/`.
+The static output is written to `dist/` and published to GitHub Pages through the `gh-pages` branch workflow.
 
 ## Data Safety
 
-This static MVP is for synthetic, non-sensitive, demo, training, and local UAT data only. Do not commit real PAP, IP/ICC, GBV/SEA/SH, grievance, worker health, fraud, or confidential records to this repository or GitHub Pages.
-
-Use `Export JSON` for browser-local backup. Use the Import page for JSON backup restore or non-sensitive CSV subproject import.
+Do not publish confidential PAP, IP/ICC, GBV/SEA/SH, grievance, worker health, fraud, or restricted records to GitHub Pages. Browser-local edits are working copies only and should be reconciled against official source records.

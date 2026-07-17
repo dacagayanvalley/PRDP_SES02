@@ -1,4 +1,4 @@
-import { appendAudit, type AppDataset } from "../../data/repositories";
+﻿import { appendAudit, type AppDataset } from "../../data/repositories";
 import type { Requirement } from "../../domain/types";
 
 const statuses: Requirement["status"][] = ["Missing", "In Progress", "Submitted", "Accepted", "Expired", "Not Applicable"];
@@ -18,7 +18,7 @@ export function RequirementManager({ dataset, subprojectId, actions, title = "Re
     const nextRequirements = dataset.requirements.map((item) => item.id === id ? { ...item, ...patch } : item);
     const next = appendAudit(
       { ...dataset, requirements: nextRequirements },
-      { entityType: "Requirement", entityId: id, action, actor: "Static MVP user", reason: patch.remarks },
+      { entityType: "Requirement", entityId: id, action, actor: "SES-Track user", reason: patch.remarks },
     );
     actions.save(next);
   }
@@ -45,3 +45,4 @@ export function RequirementManager({ dataset, subprojectId, actions, title = "Re
     </section>
   );
 }
+

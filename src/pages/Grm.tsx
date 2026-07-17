@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { appendAudit, type AppDataset } from "../data/repositories";
 import type { GrievanceCase } from "../domain/types";
 import { addWorkingDays } from "../rules/sla";
@@ -29,18 +29,18 @@ export function Grm({ dataset, actions }: Props) {
       receivedAt,
       nextDueAt: restricted ? receivedAt : addWorkingDays(receivedAt, 2),
     };
-    actions.save(appendAudit({ ...dataset, grievances: [record, ...dataset.grievances] }, { entityType: "Grievance", entityId: record.id, action: restricted ? "Created restricted GRM referral case" : "Created GRM intake case", actor: "Static MVP user" }));
+    actions.save(appendAudit({ ...dataset, grievances: [record, ...dataset.grievances] }, { entityType: "Grievance", entityId: record.id, action: restricted ? "Created restricted GRM referral case" : "Created GRM intake case", actor: "SES-Track user" }));
   }
 
   function transitionCase(id: string, status: GrievanceCase["status"], days: number, action: string) {
     const grievances = dataset.grievances.map((item) => item.id === id ? { ...item, status, nextDueAt: addWorkingDays(new Date().toISOString(), days) } : item);
-    actions.save(appendAudit({ ...dataset, grievances }, { entityType: "Grievance", entityId: id, action, actor: "Static MVP user" }));
+    actions.save(appendAudit({ ...dataset, grievances }, { entityType: "Grievance", entityId: id, action, actor: "SES-Track user" }));
   }
 
   return (
     <div className="page-grid">
       <section className="panel span-2">
-        <div className="section-heading"><div><h2>GRM Intake And Workflow</h2><p className="source">Local/synthetic only. Restricted cases are redacted from ordinary views and reports.</p></div><button onClick={createCase}>Create case</button></div>
+        <div className="section-heading"><div><h2>GRM Intake And Workflow</h2><p className="source">Browser-local working log. Restricted cases are redacted from ordinary views and reports; do not publish confidential details on GitHub Pages.</p></div><button onClick={createCase}>Create case</button></div>
         <div className="form-toolbar">
           <label>Related subproject<select value={subprojectId} onChange={(event) => setSubprojectId(event.target.value)}><option value="">Unlinked / public intake</option>{dataset.subprojects.map((item) => <option key={item.id} value={item.id}>{item.code}</option>)}</select></label>
           <label>Category<select value={category} onChange={(event) => setCategory(event.target.value)}>{categories.map((item) => <option key={item}>{item}</option>)}</select></label>
@@ -73,3 +73,4 @@ export function Grm({ dataset, actions }: Props) {
     </div>
   );
 }
+

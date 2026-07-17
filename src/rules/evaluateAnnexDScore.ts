@@ -1,4 +1,4 @@
-import type { AnnexDScore } from "../domain/types";
+﻿import type { AnnexDScore } from "../domain/types";
 
 const zeroBlockers = new Set(["criterion-1", "criterion-4", "criterion-5", "criterion-6"]);
 
@@ -16,3 +16,4 @@ export function evaluateAnnexD(scores: AnnexDScore[]) {
     basis: "ESMF Annex D, pp. 27-32",
   };
 }
+

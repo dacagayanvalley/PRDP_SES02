@@ -127,7 +127,7 @@ export function Screening({ dataset, actions }: Props) {
       version: schema.version,
       status: "Draft",
       answers: Object.values(draftAnswers).filter((answer) => typeof answer.value === "boolean"),
-      reviewerNotes: "Static MVP schema-driven screening draft.",
+      reviewerNotes: "Schema-driven screening draft.",
       updatedAt: new Date().toISOString(),
     };
     const otherScreenings = dataset.screenings.filter((item) => !(item.subprojectId === subprojectId && item.annex === annex));
@@ -136,7 +136,7 @@ export function Screening({ dataset, actions }: Props) {
     const generated = generateRequirementsFromScreenings(subprojectId, nextScreenings, schemas);
     const next = appendAudit(
       { ...dataset, screenings: nextScreenings, requirements: [...generated, ...otherRequirements] },
-      { entityType: "Screening", entityId: record.id, action: `Saved Annex ${annex} screening and regenerated requirements`, actor: "Static MVP user" },
+      { entityType: "Screening", entityId: record.id, action: `Saved Annex ${annex} screening and regenerated requirements`, actor: "SES-Track user" },
     );
     actions.save(next, `Saved Annex ${annex} and regenerated ${generated.length} requirement(s)`);
   }
@@ -258,3 +258,4 @@ function AnnexDSummary({ scores, result }: { scores: AnnexDScore[]; result: Retu
     </div>
   );
 }
+
