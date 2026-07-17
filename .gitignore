@@ -1,0 +1,14 @@
+﻿node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+*.log
+.vite/
+data/raw/
+*.tmp
+*.pdf
+*.png
+*.zip
+__pycache__/
+*.pyc
