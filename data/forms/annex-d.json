@@ -1,0 +1,17 @@
+{
+  "annexD": {
+    "version": "ESMF-Annex-D-2023-04-25",
+    "basis": "ESMF Annex D, pp. 27-32",
+    "passingRule": "Total score must be at least 30 and criteria 1, 4, 5, and 6 must not be zero.",
+    "criteria": [
+      { "id": "criterion-1", "label": "Open membership/stockholder policy", "maxScore": 10 },
+      { "id": "criterion-2", "label": "Plan for expansion of membership tied up to the grant", "maxScore": 5 },
+      { "id": "criterion-3", "label": "Farmers/fishers are themselves members/stockholders", "maxScore": 10 },
+      { "id": "criterion-4", "label": "Regular turnover/election of officers", "maxScore": 5 },
+      { "id": "criterion-5", "label": "Business plan shows clear income increase", "maxScore": 10 },
+      { "id": "criterion-6", "label": "Tangible benefits to enterprise workers", "maxScore": 5 },
+      { "id": "criterion-7", "label": "Sufficient security of tenure for facility/equipment site", "maxScore": 5 },
+      { "id": "criterion-8", "label": "No potential economic displacement of similar enterprise", "maxScore": 5 }
+    ]
+  }
+}

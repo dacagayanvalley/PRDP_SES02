@@ -1,0 +1,13 @@
+{
+  "nolRulesVersion": "static-mvp-2026-07-17",
+  "basis": ["ESMF Annex S pp. 329-330", "Operations Manual pp. 52-59", "Standards-based stricter-rule default"],
+  "defaultGates": [
+    "Signed Annex C SES Screening Form",
+    "ESA/ESMP and triggered supplementary plans",
+    "Consultation evidence",
+    "GRM designation/directory",
+    "Applicable land/IP/permit requirements",
+    "Disclosure and social database requirements where applicable",
+    "Contractor CSHP/CESMP/code of conduct before NOL 2 or procurement gate"
+  ]
+}

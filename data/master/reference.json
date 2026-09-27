@@ -1,0 +1,20 @@
+{
+  "components": [
+    { "code": "IPLAN", "label": "I-PLAN" },
+    { "code": "IBUILD", "label": "I-BUILD" },
+    { "code": "IREAP", "label": "I-REAP" },
+    { "code": "ISUPPORT", "label": "I-SUPPORT" },
+    { "code": "CERC", "label": "CERC" }
+  ],
+  "riskLevels": ["Low", "Moderate", "Substantial", "High"],
+  "roles": [
+    "System Administrator",
+    "RPCO SES Unit Head",
+    "RPCO SES Officer",
+    "RPCO Grievance Officer",
+    "RPCO GGU/GIS User",
+    "PMIU SES Focal",
+    "Auditor/Read-only"
+  ],
+  "confidentialCategories": ["Land/PAP", "IP/ICC", "Worker/OHS", "Incident", "GBV/SEA/SH", "Fraud/Corruption", "Anonymous GRM"]
+}
