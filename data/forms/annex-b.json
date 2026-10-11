@@ -1,0 +1,131 @@
+{
+    "id":  "annex-b",
+    "sections":  [
+                     {
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Identified intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B1",
+                                               "text":  "Would any intervention in the investment plan encroach into or be located in officially declared strict protection zone of protected areas (e.g. national parks, key biodiversity areas, and primary forest reserves)?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B2",
+                                               "text":  "Would any intervention in the investment plan result in significant conversion and/or encroachment or disturbance of any critical natural habitats (i.e. primary forest, critical wetlands, endangered species habitat, etc.)?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B3",
+                                               "text":  "Would any intervention in the investment plan involve cutting of mangroves / conversion of mangrove or beach forests, dewatering of mudflats, reclamation of floodplains, or coastal areas?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B4",
+                                               "text":  "Would any intervention in the investment plan involve harvesting of mangrove, coral reefs or beach sand?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B5",
+                                               "text":  "Would any intervention in the investment plan involve commercial forest product harvesting?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified intervention is recommended for exclusion from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B6",
+                                               "text":  "Would any intervention involve any dam construction of more than 15 meters in height?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B7",
+                                               "text":  "Would any intervention involve hunting or fishing in game refuge, bird sanctuaries, marine and seashore parks?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified subproject intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B8",
+                                               "text":  "Would any intervention in the investment plan fall into the high-risk category based on eVSA, CRVA, FishVool, and multi-risk criteria assessment tools?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Identified subproject intervention is recommended for exclusion from PCIP and from the priority list for funding under PRDP Scale-Up.",
+                                               "id":  "B9",
+                                               "text":  "Would any intervention in the investment plan alter, damage, or render inaccessible any cultural resources and practices, structures or heritage sites?",
+                                               "trigger":  "exclude"
+                                           }
+                                       ],
+                         "title":  "A. Eligibility Screening",
+                         "id":  "eligibility"
+                     },
+                     {
+                         "questions":  [
+                                           {
+                                               "yesAction":  "May be considered if designed to create positive impacts on IP communities; integrate ADSDPP or existing IP community plan into CSIP.",
+                                               "id":  "B10",
+                                               "text":  "Would any intervention in the investment plan be located in ancestral domain of IPs and/or located in an area with IP community/ies?",
+                                               "trigger":  "ip-plan"
+                                           },
+                                           {
+                                               "yesAction":  "Conduct consultation with vulnerable stakeholders and provide documentation.",
+                                               "id":  "B11",
+                                               "text":  "Are there IPs, marginalized, and vulnerable groups in the area?",
+                                               "trigger":  "consultation"
+                                           },
+                                           {
+                                               "yesAction":  "Check congruence with approved province/city/municipality land use plan.",
+                                               "id":  "B12",
+                                               "text":  "Would any of the interventions in the investment plan result to changes in land uses?",
+                                               "trigger":  "land-use"
+                                           }
+                                       ],
+                         "title":  "B. Other Environment and Social Criteria/Requirements",
+                         "id":  "other"
+                     }
+                 ],
+    "summaryRequirements":  [
+                                "Stakeholder identification and analysis",
+                                "Documentation of stakeholder consultation meetings on PCIP/VCA",
+                                "Overlay maps and assessment of natural, geologic and climate hazards",
+                                "Disaster and emergency response plan, climate resiliency, adaptation and mitigation measures",
+                                "Integrate ADSDPP or existing IP community plan into commodity system investment planning",
+                                "Multi-risk Analysis Result"
+                            ],
+    "version":  "ESMF-Annex-B-2023-04-25",
+    "basis":  "ESMF Annex B, pp. 9-12",
+    "instructions":  [
+                         "Review the investment planning process in PCIP formulation/updating and priority investments against SES criteria.",
+                         "Detailed location-specific data is not required at this stage but is required during I-BUILD/I-REAP preparation.",
+                         "Use CLUP, eVSA, CRVA, FishVool, participatory planning results and GGU geomapping references."
+                     ],
+    "component":  "IPLAN",
+    "fields":  [
+                   {
+                       "label":  "Province",
+                       "id":  "province",
+                       "type":  "text"
+                   },
+                   {
+                       "label":  "Commodities Covered",
+                       "id":  "commoditiesCovered",
+                       "type":  "text"
+                   },
+                   {
+                       "label":  "Nature of PCIP Updating",
+                       "id":  "pcipUpdatingNature",
+                       "type":  "select",
+                       "options":  [
+                                       "Addition of Commodity",
+                                       "Integration of Climate",
+                                       "Updating of Data and Strategies",
+                                       "New",
+                                       "Updating"
+                                   ]
+                   }
+               ],
+    "annex":  "B",
+    "title":  "Environmental and Social Safeguards Early Screening Form for Commodity Investment Plans"
+}
