@@ -1,0 +1,43 @@
+{
+  "id": "annex-p-mvp",
+  "title": "Annex P MVP Compliance Monitoring Checklist",
+  "version": "ESMF-Annex-P-static-mvp-2026-07-17",
+  "basis": "ESMF Annex P, pp. 275-309; Operations Manual pp. 59-60",
+  "checklists": [
+    {
+      "id": "p-fmr",
+      "label": "Annex P-1 FMR/Bridge Monitoring",
+      "subprojectTypes": ["Farm-to-Market Road", "Bridge"],
+      "items": [
+        { "id": "P1-1", "text": "SES monitoring checklist is posted in a visible area.", "severityOnNo": "Moderate" },
+        { "id": "P1-2", "text": "GRM poster/directory is installed and visible at the site.", "severityOnNo": "Moderate" },
+        { "id": "P1-3", "text": "Traffic, warning signs, and community safety controls are in place.", "severityOnNo": "High" },
+        { "id": "P1-4", "text": "Spoils, borrow pits, batching plants, and quarry sources are managed according to approved ESMP/CESMP.", "severityOnNo": "High" },
+        { "id": "P1-5", "text": "Tree cutting, replacement, and remaining forest protection measures are implemented where applicable.", "severityOnNo": "High" },
+        { "id": "P1-6", "text": "Worker PPE, OSH orientation, and incident/near-miss reporting are in place.", "severityOnNo": "High" }
+      ]
+    },
+    {
+      "id": "p-enterprise",
+      "label": "Annex P-5 Enterprise Operation Monitoring",
+      "subprojectTypes": ["Multi-commodity Processing Plant", "Enterprise", "Cold Storage", "Warehouse"],
+      "items": [
+        { "id": "P5-1", "text": "Enterprise operation follows the approved ESMP and operations manual.", "severityOnNo": "Moderate" },
+        { "id": "P5-2", "text": "Wastewater, solid waste, and hazardous waste controls are operational.", "severityOnNo": "High" },
+        { "id": "P5-3", "text": "Worker OSH, code of conduct, and worker GRM measures are implemented.", "severityOnNo": "High" },
+        { "id": "P5-4", "text": "Social inclusiveness and equitable benefit-sharing commitments are being monitored.", "severityOnNo": "Moderate" },
+        { "id": "P5-5", "text": "Accident/incident reports are documented and escalated where required.", "severityOnNo": "Critical" }
+      ]
+    },
+    {
+      "id": "p-general",
+      "label": "General SES Compliance Monitoring",
+      "subprojectTypes": ["Commodity Investment", "Other"],
+      "items": [
+        { "id": "PG-1", "text": "Required consultations and disclosure commitments are documented.", "severityOnNo": "Moderate" },
+        { "id": "PG-2", "text": "Open safeguards requirements are tracked with responsible party and due date.", "severityOnNo": "Moderate" },
+        { "id": "PG-3", "text": "GRM uptake points and directory are available where applicable.", "severityOnNo": "Moderate" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+    "id":  "annex-c",
+    "sections":  [
+                     {
+                         "id":  "a-subproject-eligibility",
+                         "title":  "A. Subproject Eligibility",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C1",
+                                               "text":  "Will the subproject involve construction or operation of facilities or extracting resources such as aggregates or timber in declared strict protection zone of protected areas, key biodiversity areas, and primary forest reserves?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C2",
+                                               "text":  "Will the subproject result in conversion, encroachment or disturbance of any critical natural habitats?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C3",
+                                               "text":  "Will the subproject alter, damage or render inaccessible any cultural resources and practices, structures or heritage sites?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C4",
+                                               "text":  "Will the subproject involve cutting of mangroves / conversion of mangrove or beach forests, dewatering of mudflats, reclamation of floodplains or coastal areas?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C5",
+                                               "text":  "Will the subproject involve logging, commercial forest product harvesting?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C6",
+                                               "text":  "Will the subproject involve hunting or fishing in game refuge, bird sanctuaries, marine and seashore parks?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C7",
+                                               "text":  "Will the subproject involve the collection and trade of wildlife, rare, threatened and endangered flora and fauna?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C8",
+                                               "text":  "Will the subproject involve harvesting of mangrove or coral reefs or beach sand?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C9",
+                                               "text":  "Will the subproject involve the purchase of chainsaw, extractive equipment and explosives?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C10",
+                                               "text":  "Will the subproject involve the operation of sawmills or lumberyards?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C11",
+                                               "text":  "Will the subproject involve the use of project funds to purchase or use any prohibited agro-chemicals?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C12",
+                                               "text":  "Will the project use phased-out HFCs and other ozone-depleting substances prohibited under Montreal Protocol and Kigali Agreement commitments?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C13",
+                                               "text":  "Will the subproject involve any dam construction of more than 15 meters in height?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C14",
+                                               "text":  "Will the subproject involve employment of children under 15 years of age?",
+                                               "trigger":  "exclude"
+                                           },
+                                           {
+                                               "yesAction":  "Subproject is not eligible for funding under PRDP Scale-Up.",
+                                               "id":  "C15",
+                                               "text":  "Will the subproject involve salaried activities that employ minors between 15-18 years old in dangerous jobs?",
+                                               "trigger":  "exclude"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "b-ess1-assessment-and-management-of-environmental-and-social-risks-and-impacts",
+                         "title":  "B. ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Undergo EIA process, secure ECC from DENR-EMB Central Office/MENRE, and include ESA/ESMP in FS/BP.",
+                                               "id":  "C16",
+                                               "text":  "Is the subproject a Category A Environmentally Critical Project under PEISS?",
+                                               "trigger":  "ecc-esa-esmp"
+                                           },
+                                           {
+                                               "yesAction":  "Complete EIS/IEE/EPRMP, secure ECC from DENR Regional Office/MENRE, and include ESA/ESMP in FS/BP.",
+                                               "id":  "C17",
+                                               "text":  "Is the subproject a Category B Non-Environmentally Critical Project under PEISS?",
+                                               "trigger":  "ecc-esa-esmp"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare Project Description, confirm DENR coverage, and include ESA/ESMP in FS/BP.",
+                                               "id":  "C18",
+                                               "text":  "Is the subproject a Category C Environmental Enhancement or Direct Mitigation Project under PEISS?",
+                                               "trigger":  "cnc-esa-esmp"
+                                           },
+                                           {
+                                               "yesAction":  "Secure CNC from DENR/MENRE and include ESA/ESMP in FS/BP.",
+                                               "id":  "C19",
+                                               "text":  "Is the subproject a Category D Not Covered project under PEISS?",
+                                               "trigger":  "cnc-esa-esmp"
+                                           },
+                                           {
+                                               "yesAction":  "Request hazards assessment from PHIVOLCS/MGB and include structural/non-structural mitigation in DED/ESMP.",
+                                               "id":  "C20",
+                                               "text":  "Is the subproject located in an area low to moderately susceptible to natural hazards such as flooding or landslides?",
+                                               "trigger":  "hazard-clearance"
+                                           },
+                                           {
+                                               "yesAction":  "Incorporate slope protection/stabilization in DED, POW, and ESMP.",
+                                               "id":  "C21",
+                                               "text":  "Will the subproject result in cutting of mountain sides or slopes and filling of low-lying areas?",
+                                               "trigger":  "esmp-design"
+                                           },
+                                           {
+                                               "yesAction":  "Secure clearance/assessment from DENR-MGB, PAGASA, PHIVOLCS or equivalent and provide climate-resilient/adaptation design measures.",
+                                               "id":  "C22",
+                                               "text":  "Is the subproject located in an area declared by government as a no-build zone for semi-permanent to permanent structures?",
+                                               "trigger":  "hazard-clearance"
+                                           },
+                                           {
+                                               "yesAction":  "Provide climate-smart mitigation, resilient engineering designs, and clearance/assessment from competent agencies.",
+                                               "id":  "C23",
+                                               "text":  "Will the subproject encroach into or be located in highly susceptible physical, geological or climatic hazard areas?",
+                                               "trigger":  "hazard-clearance"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "c-ess2-labor-and-working-conditions",
+                         "title":  "C. ESS2: Labor and Working Conditions",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Prepare code of conduct, worker GRM including GBV/SEA/SH procedures, and OSH Plan in accordance with LMP.",
+                                               "id":  "C24",
+                                               "text":  "Will the subproject involve hiring of salaried workers?",
+                                               "trigger":  "labor-ohs"
+                                           },
+                                           {
+                                               "yesAction":  "Include OSH measures in ESMP.",
+                                               "id":  "C25",
+                                               "text":  "Will the subproject pose occupational health and safety risks due to physical, chemical, or biological hazards?",
+                                               "trigger":  "labor-ohs"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "d-ess3-resource-efficiency-and-pollution-prevention-and-management",
+                         "title":  "D. ESS3: Resource Efficiency and Pollution Prevention and Management",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Secure Water Permit from NWRB and submit potable water testing.",
+                                               "id":  "C26",
+                                               "text":  "Will the subproject involve the extraction or use of surface or groundwater?",
+                                               "trigger":  "water-permit"
+                                           },
+                                           {
+                                               "yesAction":  "Provide water/resource-use efficiency measures in ESMP.",
+                                               "id":  "C27",
+                                               "text":  "Will the subproject require a large amount of energy, water or other resources during construction or operation?",
+                                               "trigger":  "esmp-resource"
+                                           },
+                                           {
+                                               "yesAction":  "Provide wastewater treatment facility and operational procedures.",
+                                               "id":  "C28",
+                                               "text":  "Will the subproject result in discharge of wastewater from the facility?",
+                                               "trigger":  "wastewater"
+                                           },
+                                           {
+                                               "yesAction":  "Identify waste disposal site and submit agreement/permit before contractor mobilization.",
+                                               "id":  "C29",
+                                               "text":  "Will the subproject produce a large volume of surplus excavated materials?",
+                                               "trigger":  "waste-disposal"
+                                           },
+                                           {
+                                               "yesAction":  "Provide mitigation measures and operational procedures for air/odor emissions.",
+                                               "id":  "C30",
+                                               "text":  "Will the subproject result in significant emission of air pollutants, gaseous and odor emissions?",
+                                               "trigger":  "pollution-control"
+                                           },
+                                           {
+                                               "yesAction":  "Comply with RA 6969 and include hazardous waste handling, treatment and disposal in ESMP/operations manual.",
+                                               "id":  "C31",
+                                               "text":  "Will the subproject generate hazardous wastes?",
+                                               "trigger":  "hazardous-waste"
+                                           },
+                                           {
+                                               "yesAction":  "Provide composting site or transfer to disposal facility/sanitary landfill.",
+                                               "id":  "C32",
+                                               "text":  "Will the subproject generate compostable waste?",
+                                               "trigger":  "solid-waste"
+                                           },
+                                           {
+                                               "id":  "C33",
+                                               "triggerOn":  "no",
+                                               "text":  "Does the proponent have an Environment, Health and Safety Officer?",
+                                               "trigger":  "ehs-officer",
+                                               "noAction":  "Designate or hire an EHS officer and include in ESMP."
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "e-ess4-community-health-and-safety",
+                         "title":  "E. ESS4: Community Health and Safety",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Provide OSH and community health and safety measures in ESMP.",
+                                               "id":  "C34",
+                                               "text":  "Will the subproject result in potential disease transmission from inadequate waste disposal?",
+                                               "trigger":  "community-health"
+                                           },
+                                           {
+                                               "yesAction":  "Provide community health and safety measures in ESMP.",
+                                               "id":  "C35",
+                                               "text":  "Will the subproject pose community health and safety risks from physical, chemical, or biological hazards?",
+                                               "trigger":  "community-health"
+                                           },
+                                           {
+                                               "yesAction":  "Provide mitigation measures in ESMP.",
+                                               "id":  "C36",
+                                               "text":  "Will the subproject cause community health and safety risks due to transport, storage, use or disposal of hazardous materials?",
+                                               "trigger":  "community-health"
+                                           },
+                                           {
+                                               "yesAction":  "Process under the ESMF.",
+                                               "id":  "C37",
+                                               "text":  "Will the subproject involve construction of dam up to 10 but less than 15 meters in height?",
+                                               "trigger":  "dam-esmf"
+                                           },
+                                           {
+                                               "yesAction":  "Coordinate with LGUs, secure applicable clearance/permit and include communicable disease prevention measures in ESMP.",
+                                               "id":  "C38",
+                                               "text":  "Is the project area under community quarantine status for communicable disease prevention?",
+                                               "trigger":  "communicable-disease"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare community safety and health measures including communicable/STI prevention and mitigation in ESMP.",
+                                               "id":  "C39",
+                                               "text":  "Will the subproject expose or cause community health and safety risks due to migrant workers?",
+                                               "trigger":  "labor-influx"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare relevant mitigation measures as part of ESMP.",
+                                               "id":  "C40",
+                                               "text":  "Would there be impacts on ecosystems which in turn would lead to impacts on communities?",
+                                               "trigger":  "ecosystem-services"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "f-ess5-land-acquisition-restrictions-on-land-use-and-involuntary-resettlement",
+                         "title":  "F. ESS5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Conduct PAP/electric post/streetlight/lifeline/access survey and document consultation evidence.",
+                                               "id":  "C41",
+                                               "text":  "Will the subproject adversely affect lands, crops, structures, other properties and/or livelihood?",
+                                               "trigger":  "pap-survey"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare Resettlement Action Plan with livelihood restoration assistance plan.",
+                                               "id":  "C42",
+                                               "text":  "Will the subproject displace homes and/or livelihood or restrict access to traditional economic resources?",
+                                               "trigger":  "rap"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare land acquisition documents showing transfer of ownership or rights.",
+                                               "id":  "C43",
+                                               "text":  "Will the subproject involve, require or result in acquisition of land, right-of-way and/or easement rights?",
+                                               "trigger":  "land-acquisition"
+                                           },
+                                           {
+                                               "yesAction":  "Secure tenurial instrument from DENR as applicable.",
+                                               "id":  "C44",
+                                               "text":  "Is the land to be used still classified under public land?",
+                                               "trigger":  "tenurial-instrument"
+                                           },
+                                           {
+                                               "yesAction":  "Present permit from the Philippine Reclamation Authority.",
+                                               "id":  "C45",
+                                               "text":  "Is the subproject located in a reclaimed area?",
+                                               "trigger":  "reclamation-permit"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "g-ess6-biodiversity-conservation-and-sustainable-management-of-living-natural-resources",
+                         "title":  "G. ESS6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Assess significance in ESA and develop ESMP mitigation measures to protect ecosystem services.",
+                                               "id":  "C46",
+                                               "text":  "Will the subproject affect ecosystem services such as mangroves, coral reefs, fish nurseries, vegetation flood buffers, or water retention/protection?",
+                                               "trigger":  "biodiversity-esmp"
+                                           },
+                                           {
+                                               "yesAction":  "Secure SLUP/FLAG from DENR-FMB and, where applicable, tribal community/NCIP clearance.",
+                                               "id":  "C47",
+                                               "text":  "Is the subproject located in forest land?",
+                                               "trigger":  "forest-tenure"
+                                           },
+                                           {
+                                               "yesAction":  "Avoid tree cutting to the extent possible.",
+                                               "id":  "C48",
+                                               "text":  "Will the subproject affect rare, threatened and endangered tree species including century-old trees?",
+                                               "trigger":  "tree-protection"
+                                           },
+                                           {
+                                               "yesAction":  "Apply for DENR tree cutting permit, use native/endemic/non-invasive replacement species, submit and implement Tree Replacement Plan, comply with permit conditions.",
+                                               "id":  "C49",
+                                               "text":  "Will the subproject involve tree cutting?",
+                                               "trigger":  "tree-cutting"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare ESMP measures to avoid encroachment and mitigate impacts to protected/forest areas.",
+                                               "id":  "C50",
+                                               "text":  "Is the subproject site close or adjacent to protected areas and primary forests designated by government?",
+                                               "trigger":  "protected-area-esmp"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare ESMP and Biodiversity Management Plan to prevent pollution and protect ecological integrity.",
+                                               "id":  "C51",
+                                               "text":  "Is the subproject site located within marine/aquatic ecosystems or close to any waterbody?",
+                                               "trigger":  "bmp"
+                                           },
+                                           {
+                                               "yesAction":  "Secure DENR/PAMB clearance and provide mitigation under E-NIPAS or applicable law.",
+                                               "id":  "C52",
+                                               "text":  "Will the subproject encroach into or be located inside a multiple use zone or buffer zone of an officially declared protected area/natural habitat/KBA/forest land zone?",
+                                               "trigger":  "pamb-sapa"
+                                           },
+                                           {
+                                               "yesAction":  "Screen out such interventions at the initial screening stage.",
+                                               "id":  "C53",
+                                               "text":  "Does the project/LGU propose introduction of alien species?",
+                                               "trigger":  "exclude"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "h-ess7-indigenous-peoples",
+                         "title":  "H. ESS7: Indigenous Peoples",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Undertake FPIC process and secure Certificate of Precondition from NCIP.",
+                                               "id":  "C54",
+                                               "text":  "Is the subproject an IPPF situation requiring FPIC/CP, such as overlap with or direct effect on ancestral domain, relocation of IPs, significant cultural heritage impacts, commercial development of natural resources on IP land, or commercial use of IKSP/cultural heritage?",
+                                               "trigger":  "fpic-cp"
+                                           },
+                                           {
+                                               "yesAction":  "Conduct meaningful consultations with IP communities in coordination with NCIP/MIPA and document information campaign, attendance, photos, minutes and issue matrix.",
+                                               "id":  "C55",
+                                               "text":  "If not within ancestral domain, are IP community/ies in the influence area affected by the subproject and not meeting ESS7 FPIC criteria?",
+                                               "trigger":  "ip-consultation"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "i-ess8-cultural-heritage",
+                         "title":  "I. ESS8: Cultural Heritage",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Prepare and implement CHMP with Chance Find Procedure.",
+                                               "id":  "C56",
+                                               "text":  "Is the subproject site within or near a known archaeological or paleontological site or will it pose risks to cultural resources?",
+                                               "trigger":  "chmp"
+                                           },
+                                           {
+                                               "yesAction":  "Prepare CHMP with mitigation measures integrated in ESMP.",
+                                               "id":  "C57",
+                                               "text":  "Is the subproject expected to affect intangible cultural heritage including practices, representations, expressions, knowledge or skills?",
+                                               "trigger":  "chmp"
+                                           }
+                                       ]
+                     },
+                     {
+                         "id":  "j-ess10-stakeholder-engagement-and-information-disclosure",
+                         "title":  "J. ESS10: Stakeholder Engagement and Information Disclosure",
+                         "questions":  [
+                                           {
+                                               "yesAction":  "Prepare Code of Conduct and training on managing GBV and SEA.",
+                                               "id":  "C58",
+                                               "text":  "Will the project present considerable GBV and SEA risk?",
+                                               "trigger":  "gbv-sea"
+                                           },
+                                           {
+                                               "yesAction":  "Conduct conflict context assessment and mitigate risks through social preparation and continuous dialogue.",
+                                               "id":  "C59",
+                                               "text":  "Has there been a history of conflict or an existing conflict in the area?",
+                                               "trigger":  "conflict-assessment"
+                                           },
+                                           {
+                                               "yesAction":  "Redesign/adjust the proposed subproject to avoid exacerbating conflict.",
+                                               "id":  "C60",
+                                               "text":  "Will the entry of the PRDP Scale-Up subproject trigger and/or exacerbate identified conflict in the area?",
+                                               "trigger":  "redesign"
+                                           },
+                                           {
+                                               "id":  "C61",
+                                               "triggerOn":  "no",
+                                               "text":  "Has a series of public consultations been conducted to introduce the subproject and secure social accountability?",
+                                               "trigger":  "consultation",
+                                               "noAction":  "Conduct and document public consultations."
+                                           }
+                                       ]
+                     }
+                 ],
+    "summaryRequirements":  [
+                                "Map overlaid with nearest Protected Area, Ancestral Domain, and Forest Land",
+                                "Map overlaid with natural and geologic hazard assessments",
+                                "EIS/IEE/ESA and ECC/CNC issued by DENR",
+                                "PAMB or equivalent clearance if inside protected area MUZ/buffer zone",
+                                "DENR/PHIVOLCS/PAGASA or equivalent hazard clearance",
+                                "Tenurial instrument from DENR as appropriate",
+                                "Biodiversity Management Plan",
+                                "Integrated Pest Management Plan",
+                                "Water Permit issued by NWRB",
+                                "Water quality/potability tests",
+                                "Waste Management Plan",
+                                "ESMP with quarry/batching/borrow pits measures",
+                                "NCIP Certificate of Pre-Condition/Certificate of Non-Overlap",
+                                "Evidence of IP consultation/community support",
+                                "Cultural Heritage Management Plan with Chance Find Procedure",
+                                "Resettlement Action Plan",
+                                "Tree Replacement Plan",
+                                "Electric Post Transfer Plan",
+                                "Consultation minutes",
+                                "PAPs Entitlement Survey",
+                                "Land Acquisition Documents"
+                            ],
+    "version":  "ESMF-Annex-C-2023-04-25",
+    "basis":  "ESMF Annex C, pp. 13-26",
+    "instructions":  [
+                         "Form should be part of the subproject proposal package.",
+                         "Respond assuming the without-mitigation scenario to identify potential impacts.",
+                         "Subprojects with significant adverse risks and impacts are screened out."
+                     ],
+    "component":  "IBUILD/IREAP",
+    "fields":  [
+                   {
+                       "label":  "Name of Subproject",
+                       "id":  "subprojectName",
+                       "type":  "text"
+                   },
+                   {
+                       "label":  "Proponent",
+                       "id":  "proponent",
+                       "type":  "text"
+                   },
+                   {
+                       "label":  "Subproject location",
+                       "id":  "location",
+                       "type":  "text"
+                   },
+                   {
+                       "label":  "Component Activity",
+                       "id":  "componentActivity",
+                       "type":  "select",
+                       "options":  [
+                                       "I-BUILD",
+                                       "I-REAP"
+                                   ]
+                   }
+               ],
+    "annex":  "C",
+    "title":  "Environmental and Social Safeguards Screening Form for Subprojects"
+}
